@@ -6,7 +6,7 @@ import random
 # Defines a list for characters to be picked from
 lists = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l' 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', ';', ':', ',', '.', '>', '<', '/', '?', '|', '-', '_', '=', '+', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'Z']
 
-# Creates a loop for the main part to be in to restart with evertime
+# Creates a loop for the main part to be in to restart with everytime
 while True:
     # Asks user if they want to generate a password
     ai = input("Generate passord?\n")
@@ -15,7 +15,8 @@ while True:
         # Defines a new line for user input
         def aid():
             # Asks user how many characters they want in their password
-            ais = input("How many character? [1 - 10]\n")
+            # Allows up to 15 characters max
+            ais = input("How many character? [1 - 15]\n")
             
             if ais == "1":
                 print(random.choice(lists))
@@ -47,10 +48,26 @@ while True:
             elif ais == "10":
                 print(random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists))
                 
-            elif ais == "no":
-                quit()
+            elif ais == "11":
+                print(random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists))
                 
-            elif ais == "0":
+            elif ais == "12":
+                print(random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists))
+                
+            elif ais == "13":
+                print(random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists))
+                
+            elif ais == "14":
+                print(random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists))
+                
+            elif ais == "15":
+                print(random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists), random.choice(lists))
+            
+            # Allows user to go back to the yes or no input
+            elif ais == "back":
+                return input
+                
+            elif ais == "no":
                 quit()
                 
             else:
