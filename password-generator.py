@@ -9,14 +9,14 @@ lists = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', '
 # Creates a loop for the main part to be in to restart with everytime
 while True:
     # Asks user if they want to generate a password
-    ai = input("Generate passord?\n")
+    ai = input("Generate password?\n")
     
     if ai == "yes":
         # Defines a new line for user input
         def aid():
             # Asks user how many characters they want in their password
             # Allows up to 15 characters max
-            ais = input("How many character? [1 - 15]\n")
+            ais = input("How many characters? [1 - 15]\n")
             
             if ais == "1":
                 print(random.choice(lists))
